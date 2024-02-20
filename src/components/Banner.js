@@ -72,7 +72,12 @@ export const Banner = () => {
           {/* Right column */}
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
-            <VideoPlayer url={videoUrl} />
+            {/* <VideoPlayer url={videoUrl} />
+             */}
+             {({ isVisible }) =>
+                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}> {/*React-bootstrap animation classes*/}
+                  <img src={headerImg} alt="Header Img"/>
+                </div>}
             </TrackVisibility>
           </Col>
         </Row>
